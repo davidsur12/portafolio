@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portafolio/widget/about_me.dart';
 import 'package:portafolio/widget/tecnologuias.dart';
 import 'package:social_media_buttons/social_media_buttons.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -19,18 +21,26 @@ class _CapaOnePresetacionState extends State<CapaOnePresetacion> {
     double height = MediaQuery.of(context).size.height;
     return  
     Container(
-  width: width / 1.2,
+  width: width / 1.1,
+  //container principal
   //color: Colors.green,
   child: Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
-      SizedBox(height: height / 8),
-      Row(
+      SizedBox(height: height / 18),
+
+      
+     Container(
+      margin: EdgeInsets.only(top: 100),
+      height: height/1.2,
+      child:  Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
             child: Container(
+             // color: Colors.green,
               width:width/5 ,
+              
               child:
               Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -61,10 +71,13 @@ class _CapaOnePresetacionState extends State<CapaOnePresetacion> {
         
         
          Flexible(child: Container(width:width/10)),
-          Center(child: ClipOval(
+        Container(
+          margin: EdgeInsets.only(bottom: 145),
+          child:   Center(child: ClipOval(
             child: Container(
               width: (width/3.5),
               height:(width/3.5),
+             // margin: EdgeInsets.only(bottom: 300),
               decoration: BoxDecoration(
                 border: Border.all(
                   color: Colors.green,
@@ -76,11 +89,13 @@ class _CapaOnePresetacionState extends State<CapaOnePresetacion> {
                 child:Image.asset('assets/imagenes/1_sin_fondo.png', scale: 1.0)),
             ),
           ),
-     ) 
+     ) )
         ],
-      ),
+      )),
+   AboutMe(),
+   Tecnologia() 
    
-   Tecnologia() ],
+   ],
   ),
 );
 

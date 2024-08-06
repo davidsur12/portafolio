@@ -43,9 +43,13 @@ card('assets/icon/kotlin.png', 'Kotlin', width)
   Widget card(String imagen, String titulo, double width){
 
 return Container(
-  width: width/3.5,
+
+  width: width/3.7,
   padding: EdgeInsets.all(18),
-  color:Colors.green,
+  //color:Colors.green,
+  decoration: BoxDecoration(
+    color:Color.fromARGB(255, 33, 138, 1),
+    borderRadius: BorderRadius.circular(20) ),
   child:Column(children:[Image.asset(imagen, width:70 ), SizedBox(height: 20) ,
   Animate(
     
