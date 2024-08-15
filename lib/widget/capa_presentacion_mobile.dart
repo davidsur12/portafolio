@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portafolio/widget/aboutme_movile.dart';
 import 'package:social_media_buttons/social_media_buttons.dart';
 
 class CapaPresentacionMovile extends StatefulWidget {
@@ -51,11 +52,13 @@ class _CapaPresentacionMovileState extends State<CapaPresentacionMovile> {
     child:  Text('E desarrollado aplicaiones para la plataforma android  en diferentes tecnologias como lo son java, kotlin y flutter',
     textAlign:TextAlign.center)
   ),
-  buildSocialMediaButton()
+  buildSocialMediaButton(),
+
               ],
             )
 
-
+,
+AboutmeMvile(),
     ]);
   
   }

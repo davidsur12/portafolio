@@ -1,25 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:portafolio/widget/screen_responsive.dart';
-import 'package:portafolio/widget/aboutme_movile.dart';
-
-
-
-
-
-
-
-
-class AboutMe extends StatefulWidget {
-  const AboutMe({super.key});
+class AboutmeMvile extends StatefulWidget {
+  const AboutmeMvile({super.key});
 
   @override
-  State<AboutMe> createState() => _AboutMeState();
+  State<AboutmeMvile> createState() => _AboutmeMvileState();
 }
 
-class _AboutMeState extends State<AboutMe> {
+class _AboutmeMvileState extends State<AboutmeMvile> {
   @override
   Widget build(BuildContext context) {
    double width = MediaQuery.of(context).size.width;
@@ -30,23 +18,25 @@ class _AboutMeState extends State<AboutMe> {
       //color:Colors.green,
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),
       color:Colors.green,),
-child:Row(children:[
+child:Column(children:[
   
  Container(
-  width: width/2.5,
+  width: width,
   child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
+    crossAxisAlignment: CrossAxisAlignment.center,
     children: [
 
   Text('Acerca de mi',  style:GoogleFonts.anton(fontSize:30, color:Color(4282329156) ), textAlign: TextAlign.start,),
   SizedBox(height: 15,),
+  SizedBox(width: width/10,),
+Image.asset('assets/icon/programacion.png', width: width/3.5,),
 Text('Soy un desarrollador móvil de 28 años e utilizando tecnologías como Java, Kotlin y Flutter. Mi trayectoria profesional incluye el desarrollo de proyectos diversos, donde he aplicado mis habilidades para diseñar, implementar y mantener aplicaciones móviles eficientes y escalables. Mi pasión por la tecnología y la innovación me impulsa a buscar constantemente nuevas soluciones y mejorar mis competencias técnicas.',
  style:GoogleFonts.nunito(fontSize:18, ), textAlign: TextAlign.start,)
 
 ],)),
 
 SizedBox(width: width/10,),
-Image.asset('assets/icon/programacion.png', width: width/3.5,)
+
 ]
 
 )

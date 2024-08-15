@@ -66,7 +66,8 @@ class BuildMobile extends StatelessWidget {
       //color: Colors.white,
     padding: EdgeInsets.all(20),
     child:Row(children:[
-      Icon(Icons.favorite, size: 50.0, color: Colors.black, semanticLabel: 'Text',),
+     // Icon(Icons.favorite, size: 50.0, color: Colors.black, semanticLabel: 'Text',),
+      Image.asset('assets/icon/icono.png', width:85),
     //Text('Johnnatan David Dueñas', style: Theme.of(context).textTheme.bodyText1,),
     Text('Johnnatan David Dueñas', style: GoogleFonts.indieFlower(fontSize: 22, ) ),
     SizedBox(width: 10),
@@ -93,9 +94,10 @@ class BuildWeb extends StatelessWidget {
       //color: Colors.white,
     padding: EdgeInsets.all(10),
     child:Row(children:[
-      Icon(Icons.mobile_friendly , size: 50.0,  semanticLabel: 'Text',),
+     // Icon(Icons.mobile_friendly , size: 50.0,  semanticLabel: 'Text',),
+     Image.asset('assets/icon/icono.png', width:55),
     //Text('Johnnatan David Dueñas', style: Theme.of(context).textTheme.bodyText1,),
-    Text('Johnnatan David Dueñas', style: GoogleFonts.indieFlower(fontSize: 22, ) ),
+    Text('Johnnatan Dueñas', style: GoogleFonts.indieFlower(fontSize: 22, ) ),
     SizedBox(width: 10),
     Expanded(child: Container()),
     BtnNav(

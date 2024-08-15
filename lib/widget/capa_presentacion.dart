@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portafolio/widget/about_me.dart';
+import 'package:portafolio/widget/footer.dart';
 import 'package:portafolio/widget/tecnologuias.dart';
 import 'package:social_media_buttons/social_media_buttons.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -92,8 +93,10 @@ class _CapaOnePresetacionState extends State<CapaOnePresetacion> {
      ) )
         ],
       )),
-   AboutMe(),
-   Tecnologia() 
+    AboutMe(),
+   Tecnologia() ,
+   SizedBox(height: 20,),
+   Footer()
    
    ],
   ),
@@ -129,7 +132,14 @@ Widget buildSocialMediaButton(){
      },
      size: 35,
      
-  )
+  ),
+    SocialMediaButton.google(
+     onTap: (){
+       print('Gmail');
+     },
+     size: 35,
+     
+  ),
   ]);
   
  

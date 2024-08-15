@@ -22,13 +22,14 @@ class _TecnologiaState extends State<Tecnologia> {
        Animate(
     
   effects: [FadeEffect(), ScaleEffect()],
-  child: Text('Tecnologias', style:GoogleFonts.nunito(fontSize:25)),
+  child: Text('Tecnologias', style:GoogleFonts.nunito(fontSize:27)),
 ).fadeIn(duration: 600.ms)
       ,
       SizedBox(height:25),
       (
       
       Flex(
+        mainAxisAlignment: MainAxisAlignment.center,
         direction: Axis.horizontal,children:[
 
 card('assets/icon/java.png', 'Java', width),
@@ -41,16 +42,23 @@ card('assets/icon/kotlin.png', 'Kotlin', width)
 
 
   Widget card(String imagen, String titulo, double width){
-
+//una targerta por cada tecnologia
 return Container(
 
   width: width/3.7,
+
+  
   padding: EdgeInsets.all(18),
   //color:Colors.green,
   decoration: BoxDecoration(
-    color:Color.fromARGB(255, 33, 138, 1),
+      gradient: LinearGradient(
+               colors: [Colors.yellow, Colors.orange],
+              begin: Alignment.bottomLeft,
+               end: Alignment.topRight,
+          ),
+    //color:Colors.grey,
     borderRadius: BorderRadius.circular(20) ),
-  child:Column(children:[Image.asset(imagen, width:70 ), SizedBox(height: 20) ,
+  child:Column(children:[Image.asset(imagen, width:75 ), SizedBox(height: 20) ,
   Animate(
     
   effects: [FadeEffect(), ScaleEffect()],
@@ -60,3 +68,4 @@ return Container(
 
   }
   }
+
