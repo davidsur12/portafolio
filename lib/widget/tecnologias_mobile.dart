@@ -1,53 +1,43 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-class Tecnologia extends StatefulWidget {
-  const Tecnologia({super.key});
+import 'package:flutter/widgets.dart';
+class TecnologiaMobile extends StatefulWidget {
+  const TecnologiaMobile({super.key});
 
   @override
-  State<Tecnologia> createState() => _TecnologiaState();
+  State<TecnologiaMobile> createState() => _TecnologiaMobileState();
 }
 
-class _TecnologiaState extends State<Tecnologia> {
+class _TecnologiaMobileState extends State<TecnologiaMobile> {
   @override
   Widget build(BuildContext context) {
      double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
-
-    return Column(
+    return (
       
-      children:
-    [SizedBox(height:20),
-       Animate(
-    
-  effects: [FadeEffect(), ScaleEffect()],
-  child: Text('Tecnologias', style:GoogleFonts.nunito(fontSize:27)),
-).fadeIn(duration: 600.ms)
-      ,
-      SizedBox(height:25),
-      (
       
-      Flex(
+   Flex(
         mainAxisAlignment: MainAxisAlignment.center,
-        direction: Axis.horizontal,children:[
-
+        direction: Axis.vertical,
+        children:[
+SizedBox(height:20),
 card('assets/icon/java.png', 'Java', width),
-SizedBox(width:10),
+SizedBox(height:10),
 card('assets/icon/flutter.png', 'Flutter', width),
-SizedBox(width:10),
-card('assets/icon/kotlin.png', 'Kotlin', width)
+SizedBox(height:10),
+card('assets/icon/kotlin.png', 'Kotlin', width),
+SizedBox(height:10),
     ])
-    
-    )]);
+
+    );
   }
 
-
-  Widget card(String imagen, String titulo, double width){
+   Widget card(String imagen, String titulo, double width){
 //una targerta por cada tecnologia
 return Container(
 
-  width: width/3.7,
+  width: width/1.4,
 
   
   padding: EdgeInsets.all(18),
@@ -70,6 +60,4 @@ return Container(
 
   }
   
-  
-  }
-
+}

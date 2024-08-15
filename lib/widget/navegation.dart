@@ -69,7 +69,7 @@ class BuildMobile extends StatelessWidget {
      // Icon(Icons.favorite, size: 50.0, color: Colors.black, semanticLabel: 'Text',),
       Image.asset('assets/icon/icono.png', width:85),
     //Text('Johnnatan David Dueñas', style: Theme.of(context).textTheme.bodyText1,),
-    Text('Johnnatan David Dueñas', style: GoogleFonts.indieFlower(fontSize: 22, ) ),
+   // Text('Johnnatan David Dueñas', style: GoogleFonts.indieFlower(fontSize: 22, ) ),
     SizedBox(width: 10),
     Expanded(child: Container()),
     Material(child: InkWell(
@@ -160,8 +160,10 @@ class _VisibilityExampleState extends State<VisibilityExample> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Row(children:[Icon(Icons.mobile_friendly , size: 50.0,  semanticLabel: 'Text',),
-          Text('Johnnatan David Dueñas', style: GoogleFonts.indieFlower(fontSize: 22,) ),
+          Row(children:[
+            //Icon(Icons.mobile_friendly , size: 50.0,  semanticLabel: 'Text',),
+         // Text('Johnnatan David Dueñas', style: GoogleFonts.indieFlower(fontSize: 22,) ),
+          Image.asset('assets/icon/icono.png', width:55),
         
           Expanded(child: Container()),
           IconButton(onPressed: (){

@@ -19,7 +19,7 @@ class _AboutmeMvileState extends State<AboutmeMvile> {
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),
       color:Colors.green,),
 child:Column(children:[
-  
+   SizedBox(height: 2,),
  Container(
   width: width,
   child: Column(
@@ -31,7 +31,7 @@ child:Column(children:[
   SizedBox(width: width/10,),
 Image.asset('assets/icon/programacion.png', width: width/3.5,),
 Text('Soy un desarrollador móvil de 28 años e utilizando tecnologías como Java, Kotlin y Flutter. Mi trayectoria profesional incluye el desarrollo de proyectos diversos, donde he aplicado mis habilidades para diseñar, implementar y mantener aplicaciones móviles eficientes y escalables. Mi pasión por la tecnología y la innovación me impulsa a buscar constantemente nuevas soluciones y mejorar mis competencias técnicas.',
- style:GoogleFonts.nunito(fontSize:18, ), textAlign: TextAlign.start,)
+ style:GoogleFonts.nunito(fontSize:18, ), textAlign: TextAlign.justify,)
 
 ],)),
 

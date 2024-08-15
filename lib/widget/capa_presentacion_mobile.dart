@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portafolio/widget/aboutme_movile.dart';
 import 'package:social_media_buttons/social_media_buttons.dart';
+import 'package:portafolio/widget/tecnologias_mobile.dart';
+import 'package:portafolio/widget/footer.dart';
 
 class CapaPresentacionMovile extends StatefulWidget {
   const CapaPresentacionMovile({super.key});
@@ -58,7 +60,10 @@ class _CapaPresentacionMovileState extends State<CapaPresentacionMovile> {
             )
 
 ,
+ SizedBox(height: 20,),
 AboutmeMvile(),
+TecnologiaMobile(),
+Footer()
     ]);
   
   }
