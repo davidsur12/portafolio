@@ -4,7 +4,7 @@ import 'package:portafolio/widget/aboutme_movile.dart';
 import 'package:social_media_buttons/social_media_buttons.dart';
 import 'package:portafolio/widget/tecnologias_mobile.dart';
 import 'package:portafolio/widget/footer.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 class CapaPresentacionMovile extends StatefulWidget {
   const CapaPresentacionMovile({super.key});
 
@@ -25,7 +25,7 @@ class _CapaPresentacionMovileState extends State<CapaPresentacionMovile> {
                Container(
                 padding: EdgeInsets.all(5),
                 color: Theme.of(context).colorScheme.onBackground,
-                child: Text('Hola soy Jhonatan')),
+                child: Text('Hola soy Johnnatan')),
                 Text('Un Desarrollador de Aplicaciones Moviles', style: GoogleFonts.anton(fontSize: 30, color:Colors.green ),
                 textAlign:TextAlign.center
                  ),
@@ -79,6 +79,7 @@ Footer()
      onTap: (){
        print('Instagram');
      },
+      url: "https://www.instagram.com/jhonatandavid9?igsh=MWo5MjA2Z2N5bmZjdA==",
      size: 35,
      //color: Colors.blue,
   ),
@@ -86,22 +87,47 @@ Footer()
      onTap: (){
        print('Github');
      },
+     url:"https://github.com/davidsur12",
      size: 35,
      //color: Colors.blue,
   ),
   
    SocialMediaButton.twitter(
      onTap: (){
-       print('Instagram');
+       print('Twiter');
      },
+     url: "https://x.com/David4125327916",
      size: 35,
      
-  )
+  ),
+      SocialMediaButton.google(
+        onTap: (){
+          print('Gmail');
+          _sendEmail();
+        },
+        size: 35,
+
+      )
   ]);
   
  
 }
+  void _sendEmail() async {
+    final Uri emailUri = Uri(
+      scheme: 'fdsf',
+      path: 'jhonatandavid9@gmail.com',  // Dirección de correo
+      queryParameters: {
+        'subject': ' ',   // Asunto del correo
+        'body': ' '  // Cuerpo del correo
+      },
+    );
 
+    if (await canLaunch(emailUri.toString())) {
+      await launch(emailUri.toString());
+    } else {
+      throw 'No se pudo abrir la aplicación de correo';
+    }
+  }
 }
 
 /*

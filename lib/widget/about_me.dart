@@ -28,7 +28,13 @@ class _AboutMeState extends State<AboutMe> {
     return Container(
       padding: EdgeInsets.all(50),
       //color:Colors.green,
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.green, Colors.lightGreenAccent], // Colores del gradiente
+            begin: Alignment.topLeft,             // Inicio del gradiente
+            end: Alignment.bottomRight,           // Fin del gradiente
+          ),
+        borderRadius: BorderRadius.circular(20),
       color:Colors.green,),
 child:Row(children:[
   

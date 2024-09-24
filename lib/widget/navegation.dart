@@ -115,8 +115,9 @@ class BuildWeb extends StatelessWidget {
     color: Theme.of(context).colorScheme.onSurface) ,
   
     IconButton(onPressed: (){
+      //btn cambio de tema  change_circle_sharp
        Get.changeThemeMode(Get.isDarkMode ? ThemeMode.light : ThemeMode.dark);
-    }, icon: Icon(Icons.change_circle_sharp, size: 50, ))
+    }, icon: Icon(Icons.lightbulb_circle_sharp , size: 50, ))
 
     ]));
   }
@@ -168,7 +169,7 @@ class _VisibilityExampleState extends State<VisibilityExample> {
           Expanded(child: Container()),
           IconButton(onPressed: (){
        Get.changeThemeMode(Get.isDarkMode ? ThemeMode.light : ThemeMode.dark);
-    }, icon: Icon(Icons.change_circle_sharp, size: 50, )),
+    }, icon: Icon(Icons.lightbulb_circle_sharp, size: 50, )),
           IconButton(onPressed: (){
 
              setState(() {

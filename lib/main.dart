@@ -42,7 +42,7 @@ class MyApp2 extends StatelessWidget {
       theme: ThemeData(colorScheme: MaterialTheme.lightScheme(),
       
       textTheme: TextTheme(
-        bodyText1:TextStyle(fontSize: 20)
+        //bodyText1:TextStyle(fontSize: 20)
       )) ,
       darkTheme: ThemeData(colorScheme: MaterialTheme.darkMediumContrastScheme()),
       home:Scaffold(

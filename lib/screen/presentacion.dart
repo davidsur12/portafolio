@@ -40,20 +40,3 @@ class BuilWebPresentacion  extends StatelessWidget {
     return CapaOnePresetacion();
   }
 }
-
-/*
-class Presentacion extends StatefulWidget {
-  const Presentacion({super.key});
-
-  @override
-  State<Presentacion> createState() => _PresentacionState();
-}
-
-class _PresentacionState extends State<Presentacion> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder(color: Colors.green,);
-  }
-}
-
-*/

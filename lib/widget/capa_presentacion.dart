@@ -6,6 +6,7 @@ import 'package:portafolio/widget/footer.dart';
 import 'package:portafolio/widget/tecnologuias.dart';
 import 'package:social_media_buttons/social_media_buttons.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:url_launcher/url_launcher.dart';
 //https://pub.dev/packages/social_media_buttons
 
 class CapaOnePresetacion extends StatefulWidget {
@@ -16,6 +17,8 @@ class CapaOnePresetacion extends StatefulWidget {
 }
 
 class _CapaOnePresetacionState extends State<CapaOnePresetacion> {
+
+  final Uri _urlGithub = Uri.parse('https://github.com/davidsur12');
    @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -50,7 +53,7 @@ class _CapaOnePresetacionState extends State<CapaOnePresetacion> {
                 alignment: Alignment.topLeft,
                 padding: EdgeInsets.all(5),
                 
-                child: Text('Hola soy Jhonatan', textAlign: TextAlign.start,  style:GoogleFonts.nunito(fontSize:18))),
+                child: Text('Hola soy Johnnatan', textAlign: TextAlign.start,  style:GoogleFonts.nunito(fontSize:18))),
                 
                Animate(
     
@@ -116,12 +119,15 @@ Widget buildSocialMediaButton(){
        print('Instagram');
      },
      size: 35,
+      url: "https://www.instagram.com/jhonatandavid9?igsh=MWo5MjA2Z2N5bmZjdA==",
      //color: Colors.blue,
   ),
    SocialMediaButton.github(
      onTap: (){
        print('Github');
+      // _launchUrl(_urlGithub);
      },
+     url:"https://github.com/davidsur12",
      size: 35,
      //color: Colors.blue,
   ),
@@ -130,12 +136,14 @@ Widget buildSocialMediaButton(){
      onTap: (){
        print('Instagram');
      },
+     url: "https://x.com/David4125327916",
      size: 35,
      
   ),
     SocialMediaButton.google(
      onTap: (){
        print('Gmail');
+       _sendEmail();
      },
      size: 35,
      
@@ -148,55 +156,29 @@ Widget buildSocialMediaButton(){
 Widget buildSocialMediaIcon(){
   return Icon(SocialMediaIcons.github_circled);
 }
+
+  Future<void> _launchUrl(url) async {
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
+
+    }
+  }
+
+  void _sendEmail() async {
+    final Uri emailUri = Uri(
+      scheme: '',
+      path: 'jhonatandavid9@gmail.com',  // Dirección de correo
+      queryParameters: {
+        'subject': ' ',   // Asunto del correo
+        'body': ' '  // Cuerpo del correo
+      },
+    );
+
+    if (await canLaunch(emailUri.toString())) {
+      await launch(emailUri.toString());
+    } else {
+      throw 'No se pudo abrir la aplicación de correo';
+    }
+  }
 }
 
-/*
-    Column(
-        
-        mainAxisAlignment: MainAxisAlignment.center,
-        children:[
-          SizedBox(height: (height/8),),
-Center(child:Row(
-  mainAxisAlignment: MainAxisAlignment.center,
-  children:[Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-    Text('Hola soy Jhonatan'),
-    Flexible(
-      
-      child:  Text('Un Desarrollador de Aplicaciones Moviles', style: GoogleFonts.anton(fontSize: 20, ) ))
-   ,
-   Container(
-    width:width/2.5,
-    child:  Text('E desarrollado aplicaiones para la plataforma android  en diferentes tecnologias como lo son java, kotlin y flutter')
-  )
-  ],), 
- // SizedBox(width:width/10),//separador del texto y la imagen
-   //Expanded(child: Container(width:width/4)),
-   Flexible(child: Container(width:width/10)),
-   
-  
- Center(child: ClipOval(
-            child: Container(
-              width: (width/3.5),
-              height:(width/3.5),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.transparent,
-                  width: 4.0,
-                ),
-              ),
-              child:Image.asset('assets/imagenes/1_sin_fondo.png', scale: 1.0),
-            ),
-          ),
-     )   
-  ]))
-      
-    ])
-   
-*/
-
-/*
-
-
-*/

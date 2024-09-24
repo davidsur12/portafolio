@@ -44,6 +44,7 @@ class _FooterState extends State<Footer> {
      onTap: (){
        print('Instagram');
      },
+      url: "https://www.instagram.com/jhonatandavid9?igsh=MWo5MjA2Z2N5bmZjdA==",
      size: 35,
      //color: Colors.blue,
   ),
@@ -51,6 +52,7 @@ class _FooterState extends State<Footer> {
      onTap: (){
        print('Github');
      },
+     url:"https://github.com/davidsur12",
      size: 35,
      //color: Colors.blue,
   ),
@@ -59,6 +61,7 @@ class _FooterState extends State<Footer> {
      onTap: (){
        print('Instagram');
      },
+     url: "https://x.com/David4125327916",
      size: 35,
      
   ),

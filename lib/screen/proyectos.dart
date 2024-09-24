@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portafolio/widget/portafolio_movile.dart';
+import 'package:portafolio/widget/portafolio_web.dart';
 import 'package:portafolio/widget/screen_responsive.dart';
 
 class Proyectos extends ResponsiveWidget{
@@ -23,7 +25,7 @@ class ProyectosMovile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Placeholder(child: Container(child:Text('Proyectos Moviele')));
+  return  PortafolioMovile();
   }
 }
 
@@ -32,6 +34,6 @@ class ProyectosWeb extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Placeholder(child: Container(child:Text('Proyectos Moviele')));
+    return PortafolioWeb();
   }
 }

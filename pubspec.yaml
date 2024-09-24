@@ -43,6 +43,7 @@ dependencies:
   pluto_menu_bar: ^3.0.1
   social_media_buttons: ^1.0.0
   flutter_animate: ^4.5.0
+  url_launcher: ^6.3.0
 
 dev_dependencies:
   flutter_test:

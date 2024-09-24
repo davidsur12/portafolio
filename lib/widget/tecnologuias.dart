@@ -18,11 +18,11 @@ class _TecnologiaState extends State<Tecnologia> {
     return Column(
       
       children:
-    [SizedBox(height:20),
+    [SizedBox(height:30),
        Animate(
     
   effects: [FadeEffect(), ScaleEffect()],
-  child: Text('Tecnologias', style:GoogleFonts.nunito(fontSize:27)),
+  child: Text('Tecnologias', style:GoogleFonts.nunito(fontSize:32)),
 ).fadeIn(duration: 600.ms)
       ,
       SizedBox(height:25),
@@ -54,7 +54,7 @@ return Container(
   //color:Colors.green,
   decoration: BoxDecoration(
       gradient: LinearGradient(
-               colors: [Colors.yellow, Colors.orange],
+               colors: [Colors.yellow, Colors.greenAccent],
               begin: Alignment.bottomLeft,
                end: Alignment.topRight,
           ),
@@ -64,7 +64,7 @@ return Container(
   Animate(
     
   effects: [FadeEffect(), ScaleEffect()],
-  child: Text(titulo, style:GoogleFonts.nunito(fontSize:25)),
+  child: Text(titulo, style:GoogleFonts.nunito(fontSize:25, color: Colors.black)),
 ).fadeIn(duration: 600.ms)
   ]));
 
