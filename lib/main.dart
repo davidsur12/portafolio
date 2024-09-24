@@ -6,6 +6,8 @@ import 'package:portafolio/screen/proyectos.dart';
 import 'package:portafolio/theme/theme.dart';
 import 'package:portafolio/screen/presentacion.dart';
 import 'package:portafolio/widget/navegation.dart';
+import 'dart:html' as html;
+
 
 
 
@@ -34,11 +36,12 @@ class MyApp2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+
     double width = MediaQuery.of(context).size.width;
     double maxWith = width > 1300 ? width-(width*0.06) : width;
 
     return GetMaterialApp(
-      title: 'Portafolio',
+      title: 'Johnnatan Duenas',
       theme: ThemeData(colorScheme: MaterialTheme.lightScheme(),
       
       textTheme: TextTheme(
